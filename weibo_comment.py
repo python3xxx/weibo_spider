@@ -1,14 +1,14 @@
-import requests
 import json
 import requests
 import time
 from lxml import etree
 import os
+from urllib.parse import parse_qs
 
 # proxies = ["222.85.28.130:52590","117.191.11.80:80","117.127.16.205:8080","118.24.128.46:1080","120.78.225.5:3128","113.124.92.200:9999","183.185.1.47:9797","115.29.3.37:80","36.248.129.158:9999","222.89.32.182:9999","117.191.11.111:80","182.35.84.182:9999","47.100.103.71:80","121.63.209.92:9999","124.193.37.5:8888","39.135.24.11:8080","14.146.95.4:9797","182.35.83.244:9999","113.120.36.179:9999","1.199.31.90:9999","58.17.125.215:53281","212.64.51.13:8888","182.35.84.135:9999","163.204.247.60:9999","39.106.35.21:3128","202.39.222.32:80","120.83.111.42:9999","63.220.1.43:80","42.238.85.70:9999","117.191.11.107:80"]
 
 headers = {
-    'Cookie': 'SINAGLOBAL=9538335755646.822.1532505829725; SCF=AvPbUDu6WoemSs8mNUyrWwUmSwgU6Zg6iPaRvVTbkGKX1rbNhcnWRFLoKYuIvyod-0JDVcjv-6AgVN_tv_x9kbc.; SUHB=00xpBW_UPo9hUl; SUB=_2A25x79vSDeRhGeNI71oZ-SrPzzmIHXVTE-WarDV8PUJbkNAKLRTBkW1NSHfB70-8Ju6aPYLWWEvCI7b7bzV_f4Hd; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WFvhvnF-6JhwFfQ-698_OV85JpX5oz75NHD95QfSoBR1h.Xe0BfWs4DqcjZKci39gSXPXfydntt; _s_tentry=cn.bing.com; UOR=cuiqingcai.com,widget.weibo.com,cn.bing.com; Apache=260000036604.32648.1562899406325; ULV=1562899406340:11:1:1:260000036604.32648.1562899406325:1561711888395; YF-V5-G0=95d69db6bf5dfdb71f82a9b7f3eb261a; wb_view_log_5648894345=1440*9001; wvr=6; Ugrow-G0=e1a5a1aae05361d646241e28c550f987; webim_unReadCount=%7B%22time%22%3A1564475378896%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22allcountNum%22%3A1%2C%22msgbox%22%3A0%7D; YF-Page-G0=aac25801fada32565f5c5e59c7bd227b|1564475390|1564475280',
+    'Cookie': '你的cookie信息',
 }
 
 
@@ -98,7 +98,7 @@ if __name__ == '__main__':
 
             html = etree.HTML(html)
             max_id_json = html.xpath('//div[@node-type="comment_loading"]/@action-data')[0]
-            from urllib.parse import parse_qs
+
 
             node_params = parse_qs(max_id_json)
             # max_id
