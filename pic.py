@@ -4,6 +4,10 @@ from PIL import Image
 import math
 
 
+"""
+生成照片墙
+"""
+
 x = 0
 y = 0
 # 获取pic下 图像列表

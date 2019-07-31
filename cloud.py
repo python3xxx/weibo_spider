@@ -1,10 +1,12 @@
-# wordcloud词云  
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, ImageColorGenerator
 import os
 import numpy as np
 import PIL.Image as Image
 
+"""
+wordcloud词云  
+"""
 
 path = os.getcwd() + '/comment.txt'
 content = open(path, encoding='utf-8').read().replace('图片评论', '')\
